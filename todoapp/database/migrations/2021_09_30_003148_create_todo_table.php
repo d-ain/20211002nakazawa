@@ -13,7 +13,7 @@ class CreateTodoTable extends Migration
      */
     public function up()
     {
-     Schema::create('todo', function (Blueprint $table){
+     Schema::create('todos', function (Blueprint $table){
         $table->bigIncrements('id',20);
         $table->string('content', 191);
         $table->timestamp('created_at')->useCurrent()->nullable();
@@ -28,6 +28,6 @@ class CreateTodoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('todo');
+        Schema::dropIfExists('todos');
     }
 }
